@@ -9,8 +9,8 @@ CORS(app)
 def index():
     return
 
-@app.route('/Par')
+@app.route('#Par')
 def index():
-    return 'nothing is here'
+    return
     
 app.run(host='0.0.0.0',port=81)
