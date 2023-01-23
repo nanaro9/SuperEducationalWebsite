@@ -1,3 +1,3 @@
-# SuperChatBot2023
+# SuperEducationalWebsite
 
-Čata bots, kurš var dot atbildi jebkādam lietotāja teiktajam/jautājumam, tādā veidā palīdzot cilvēkiem, kuriem nav ar kuru parunāt.
+Interneta lapa ar alfabētu, visādām atmiņas spēlēm ar burtiem, cipariem. Tieši tas, kas ir vajadzīgs bērniem!
