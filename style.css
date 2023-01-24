@@ -83,3 +83,32 @@
     font-weight: 100;
     line-height: 25px;
 }
+.image{
+    margin-top: 15vh;
+    height: 40vh;
+    width: auto;
+}
+
+.content2{
+    width: 100%;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+.content2 h1{
+    font-size: 60px;
+    margin-top: 80px;
+}
+.content2 p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 15px;
+    font-size: xx-large;
+}
+.image{
+    margin-top: 15vh;
+    height: 40vh;
+    width: auto;
+}
