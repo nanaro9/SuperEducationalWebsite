@@ -2,10 +2,11 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-        <title>SOLS</title>
-        <link href="aboutPage.css" rel="stylesheet" type="text/css"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Memory Game with JavaScript</title>
+        <link rel="stylesheet" href="memoryGame.css">
+        <script src="memorygame.js" defer></script>
     </head>
     <body>
         <!-- Navigational Bar Section -->
@@ -18,18 +19,26 @@
                         <li><a href="/alfabetsLapa/alfabets.html" class="navbar_links" id="abc-page">Alfabēts</a></li>
                         <li><a href="/gamesLapa/spelesLapa.html" class="navbar_links" id="game-page">Spēles</a></li>
                         <li><a href="/videoLapa/video.html" class="navbar_links" id="video-link">Video</a></li>
-                        <li><a href="par.html" class="navbar_linksA" id="about-link">Par</a></li>
+                        <li><a href="/aboutLapa/par.html" class="navbar_links" id="about-link">Par</a></li>
                     </ul>
                 </nav>   
             </div>
         </div>
 
-        <div class="content">
-            <a><img src="/Atteli/image1.png" class="image"></a>
-            <h1>Programmēšana I<br>6. tēmas ietvaros</h1>
-            <p>Projekta veidotājs - Aleksis Počs</p>
+        <div class="game">
+            <div class="controls">
+                <button>Sākt</button>
+                <div class="stats">
+                    <div class="moves">0 Soļu</div>
+                    <div class="timer">Laiks: 0 sekundes</div>
+                </div>
+            </div>
+            <div class="board-container">
+                <div class="board" data-dimension="4"></div>
+                <div class="win">Tu Uzvarēji!</div>
+            </div>
         </div>
-       
+
     </body>
-    <script>src="script.js"</script>
-</html>
+
+</html> 

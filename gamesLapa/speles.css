@@ -78,7 +78,7 @@
 .navbar ul li:hover::after{
     width: 100%;
 }
-.content{
+.spele1{
     width: 100%;
     position: absolute;
     top:50%;
@@ -86,53 +86,36 @@
     text-align: center;
     color: #fff;
 }
-.content h1{
+.spele1 a{
+    justify-content: center;
+}
+.spele1 h1{
     font-size: 70px;
     margin-top: 80px;
 }
-.content p{
+.spele1 p{
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
 }
-.image{
-    margin-top: 15vh;
-    height: 40vh;
-    width: auto;
+.spele1 img{
+    width: 10%;
+    height: 10%;
+    align-items: center;
 }
-
-button{
+.spele1 button{
     width: 200px;
-    height: 55px;
+    height: 75px;
     padding: 15px 0;
     text-align: center;
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid #62DCF6;
-    background: transparent;
-    color:  #fff;
+    font-size: x-large;
+    /* border: 2px solid #62DCF6; */
+    background: #009bbe;
+    color:  #ffffff;
     cursor: pointer;
     position: relative;
     overflow: hidden;
-}
-
-span{
-    background: #62DCF6;
-    height: 100%;
-    width: 0;
-    border-radius: 25px;
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    top: 0;
-    transition: 0.5s;
-}
-
-button:hover span{
-    width: 100%;
-}
-
-button:hover{
-    border: none;
 }

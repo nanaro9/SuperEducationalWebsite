@@ -70,6 +70,11 @@
     color: #fff;
     text-transform: uppercase;
 }
+.navbar_linksA{
+    text-decoration: none;
+    color: #ddb938;
+    text-transform: uppercase;
+}
 .navbar ul li::after{
     content: '';
     height: 3px;
