@@ -50,7 +50,7 @@ const generateGame = () => {
         throw new Error("The dimension of the board must be an even number.")
     }
 
-    const emojis = ['A', 'Ā', 'E', 'Ē', 'S', 'Š', 'Z', 'Ž', 'N', 'Ņ']
+    const emojis = ['A', 'Ā', 'E', 'Ē', 'S', 'Š', 'Z', 'Ž', 'N', 'Ņ','J','H','I','Ī','B','C','Č','G','Ģ','L','Ļ','K','Ķ',"O",'T','U','Ū','V','M','F','D','R','P']
     const picks = pickRandom(emojis, (dimensions * dimensions) / 2) 
     const items = shuffle([...picks, ...picks])
     const cards = `
@@ -119,7 +119,7 @@ const flipCard = card => {
             selectors.win.innerHTML = `
                 <span class="win-text">
                     Tu Uzvarēji!<br />
-                    with <span class="highlight">${state.totalFlips}</span> soļu<br />
+                    ar <span class="highlight">${state.totalFlips}</span> soļiem<br />
                     <span class="highlight">${state.totalTime}</span> sekundēs
                 </span>
             `
