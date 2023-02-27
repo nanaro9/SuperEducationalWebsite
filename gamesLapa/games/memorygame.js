@@ -51,18 +51,23 @@ const generateGame = () => {
     }
 
     const emojis = ['A', 'Ā', 'E', 'Ē', 'S', 'Š', 'Z', 'Ž', 'N', 'Ņ','J','H','I','Ī','B','C','Č','G','Ģ','L','Ļ','K','Ķ',"O",'T','U','Ū','V','M','F','D','R','P']
-    const picks = pickRandom(emojis, (dimensions * dimensions) / 2) 
-    const items = shuffle([...picks, ...picks])
+    const picks1 = pickRandom(emojis, (dimensions * dimensions) / 2) 
+    const items = shuffle([...picks1, ...picks1])
+    // console.log(shuffle([...['a','b','c','d'],...['a1','b1','c1','d1']]))
+    console.log(items)
+    let i = 0
     const cards = `
         <div class="board" style="grid-template-columns: repeat(${dimensions}, auto)">
             ${items.map(item => `
                 <div class="card">
                     <div class="card-front"></div>
-                    <div class="card-back">${item}</div>
+                    <div class="card-back",id="${i++}">${item}</div>
                 </div>
             `).join('')}
        </div>
     `
+
+    console.log(cards)
     
     const parser = new DOMParser().parseFromString(cards, 'text/html')
 
@@ -104,7 +109,8 @@ const flipCard = card => {
     if (state.flippedCards === 2) {
         const flippedCards = document.querySelectorAll('.flipped:not(.matched)')
 
-        if (flippedCards[0].innerText === flippedCards[1].innerText) {
+        if (flippedCards[0].innerText == flippedCards[1].innerText) {
+            console.log('matched')
             flippedCards[0].classList.add('matched')
             flippedCards[1].classList.add('matched')
         }

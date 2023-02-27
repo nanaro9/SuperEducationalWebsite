@@ -1,22 +1,18 @@
 
 const options = {
-  aroma: "Pleasing smell",
-  pepper: "Salt's partner",
-  halt: "put a stop to",
-  jump: "Rise suddenly ",
-  shuffle: "Mix cards up ",
-  combine: "Add; Mix",
-  chaos: "Total disorder",
-  labyrinth: "Maze",
-  disturb: "Interrupt; upset ",
-  shift: "Move; Period of word",
-  machine: "Device or appliance",
+  Ābols: "Sarkans vai zaļš auglis, aug koku zaros!",
+  Ceļš: "Vieta, kur brauc mašīnas!",
+  Debesis: "Skatotis augšup, lielas un zilas!",
+  Sēne: "Mežā, rudenī aug zem kokiem paslēpušies!",
+  Skola: "Vieta, kur bērni mācās lasīt, rakstīt, skaitīt!",
+
 };
 
 //Initial References
 const message = document.getElementById("message");
 const hintRef = document.querySelector(".hint-ref");
 const controls = document.querySelector(".controls-container");
+const wrapper = document.querySelector(".wrapper")
 const startBtn = document.getElementById("start");
 const letterContainer = document.getElementById("letter-container");
 const userInpSection = document.getElementById("user-input-section");
@@ -40,12 +36,19 @@ const blocker = () => {
 //Start Game
 startBtn.addEventListener("click", () => {
   controls.classList.add("hide");
+  wrapper.style.visibility = "visible"
+  controls.style.visibility = 'visible'
+  letterContainer.style.visibility = 'visible'
+  hintRef.style.visibility = 'visible'
+  userInpSection.style.visibility = 'visible'
+  message.style.visibility = 'visible'
   init();
 });
 
 //Stop Game
 const stopGame = () => {
   controls.classList.remove("hide");
+  // wrapper.style.visibility = "hidden"
 };
 
 //Generate Word Function
@@ -55,7 +58,7 @@ const generateWord = () => {
   randomWord = words[generateRandomValue(words)];
   randomHint = options[randomWord];
   hintRef.innerHTML = `<div id="wordHint">
-  <span>Hint: </span>${randomHint}</div>`;
+  <span>Padoms: </span>${randomHint}</div>`;
   let displayItem = "";
   randomWord.split("").forEach((value) => {
     displayItem += '<span class="inputSpace">_ </span>';
@@ -63,7 +66,7 @@ const generateWord = () => {
 
   //Display each element as span
   userInpSection.innerHTML = displayItem;
-  userInpSection.innerHTML += `<div id='chanceCount'>Chances Left: ${lossCount}</div>`;
+  userInpSection.innerHTML += `<div id='chanceCount'>Atlikušie Mēģinājumi: ${lossCount}</div>`;
 };
 
 //Initial Function
@@ -81,16 +84,17 @@ const init = () => {
   generateWord();
 
   //For creating letter buttons
-  for (let i = 65; i < 91; i++) {
+  for (let i = 0; i < 33; i++) {
     let button = document.createElement("button");
     button.classList.add("letters");
 
+    let abc = ['A','Ā','B','C','Č','D','E','Ē','F','G','Ģ','H','I','Ī','J','K','Ķ','L','Ļ','M','N','Ņ','O','P','R','S','Š','T','U','Ū','V','Z','Ž']
     //Number to ASCII[A-Z]
-    button.innerText = String.fromCharCode(i);
+    button.innerText = abc[i];
 
     //Character button onclick
     button.addEventListener("click", () => {
-      message.innerText = `Correct Letter`;
+      message.innerText = `Pareizais Burts!`;
       message.style.color = "#008000";
       let charArray = randomWord.toUpperCase().split("");
       let inputSpace = document.getElementsByClassName("inputSpace");
@@ -107,8 +111,12 @@ const init = () => {
             winCount += 1;
             //If winCount equals word length
             if (winCount == charArray.length) {
-              resultText.innerHTML = "You Won";
-              startBtn.innerText = "Restart";
+              letterContainer.style.visibility = 'hidden'
+              hintRef.style.visibility = 'hidden'
+              userInpSection.style.visibility = 'hidden'
+              message.style.visibility = 'hidden'
+              resultText.innerHTML = "Tu Uzvarēji!";
+              startBtn.innerText = "Vēlreiz";
               //block all buttons
               blocker();
             }
@@ -120,12 +128,16 @@ const init = () => {
         lossCount -= 1;
         document.getElementById(
           "chanceCount"
-        ).innerText = `Chances Left: ${lossCount}`;
-        message.innerText = `Incorrect Letter`;
+        ).innerText = `Atlikušie gājieni: ${lossCount}`;
+        message.innerText = `Nepareizs Burts`;
         message.style.color = "#ff0000";
         if (lossCount == 0) {
-          word.innerHTML = `The word was: <span>${randomWord}</span>`;
-          resultText.innerHTML = "Game Over"; 
+          letterContainer.style.visibility = 'hidden'
+          hintRef.style.visibility = 'hidden'
+          userInpSection.style.visibility = 'hidden'
+          message.style.visibility = 'hidden'
+          word.innerHTML = `Atbilde ir: <span>${randomWord}</span>`;
+          resultText.innerHTML = "Spēle Beigusies."; 
           blocker();
         }
       }
