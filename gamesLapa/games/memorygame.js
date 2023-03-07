@@ -108,9 +108,9 @@ const flipCard = card => {
 
     if (state.flippedCards === 2) {
         const flippedCards = document.querySelectorAll('.flipped:not(.matched)')
-
+        console.log(flippedCards)
         if (flippedCards[0].innerText == flippedCards[1].innerText) {
-            console.log('matched')
+            console.log('matched Text')
             flippedCards[0].classList.add('matched')
             flippedCards[1].classList.add('matched')
         }
@@ -139,6 +139,8 @@ const attachEventListeners = () => {
     document.addEventListener('click', event => {
         const eventTarget = event.target
         const eventParent = eventTarget.parentElement
+
+        console.log(eventTarget.innerHTML)
 
         if (eventTarget.className.includes('card') && !eventParent.className.includes('flipped')) {
             flipCard(eventParent)
