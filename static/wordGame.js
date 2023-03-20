@@ -2,8 +2,8 @@
 const options = {
   Ābols: "Sarkans vai zaļš auglis, aug koku zaros!",
   Ceļš: "Vieta, kur brauc mašīnas!",
-  Debesis: "Skatotis augšup, lielas un zilas!",
-  Sēne: "Mežā, rudenī aug zem kokiem paslēpušies!",
+  Debesis: "Skatoties augšup, lielas un zilas!",
+  Sēnes: "Mežā, rudenī aug zem kokiem paslēpušies!",
   Skola: "Vieta, kur bērni mācās lasīt, rakstīt, skaitīt!",
 
 };
