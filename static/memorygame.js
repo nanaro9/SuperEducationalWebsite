@@ -103,12 +103,16 @@ const flipCard = card => {
     }
 
     if (state.flippedCards <= 2) {
+        console.log(card.classList)
         card.classList.add('flipped')
     }
 
     if (state.flippedCards === 2) {
         const flippedCards = document.querySelectorAll('.flipped:not(.matched)')
-        console.log(flippedCards)
+        console.log(flippedCards, flippedCards.length)
+
+        if (flippedCards.length === 3)
+
         if (flippedCards[0].innerText == flippedCards[1].innerText) {
             console.log('matched Text')
             flippedCards[0].classList.add('matched')
@@ -140,11 +144,15 @@ const attachEventListeners = () => {
         const eventTarget = event.target
         const eventParent = eventTarget.parentElement
 
-        console.log(eventTarget.innerHTML)
+        if (!eventTarget.className.includes('board')){
 
-        if (eventTarget.className.includes('card') && !eventParent.className.includes('flipped')) {
-            flipCard(eventParent)
-        } else if (eventTarget.nodeName === 'BUTTON' && !eventTarget.className.includes('disabled')) {
+            if (eventTarget.className.includes('card') && !eventParent.className.includes('flipped')) {
+                console.log(eventTarget.innerHTML)
+                flipCard(eventParent)
+            }
+        }
+
+        if (eventTarget.nodeName === 'BUTTON' && !eventTarget.className.includes('disabled')) {
             startGame()
         }
     })
