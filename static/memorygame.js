@@ -111,7 +111,15 @@ const flipCard = card => {
         const flippedCards = document.querySelectorAll('.flipped:not(.matched)')
         console.log(flippedCards, flippedCards.length)
 
-        if (flippedCards.length === 3)
+        if (flippedCards[0].className.includes('board')){
+            console.log('board found')
+            delete flippedCards.board
+            console.log(flippedCards)
+        }
+
+        if (flippedCards.length === 3){
+            console.log(typeof(flippedCards), flippedCards[0], typeof(flippedCards[0]))
+        }
 
         if (flippedCards[0].innerText == flippedCards[1].innerText) {
             console.log('matched Text')
