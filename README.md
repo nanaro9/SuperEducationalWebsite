@@ -8,11 +8,11 @@ Mapē "Templates" ir visi .html faili
 
 Mapē "static" atrodas visi papildus faili izmantoti tajos .html failos
 
-/static/Burti |   Burtu attēli
-/static/css |   .css faili
-/static/images |   attēli, kuri tika izmantoti vispārīgi
-/static/js |   .javascript faili
-/static/Sounds |   atsevišķi skaņas efekti alfabēta lapai
+/static/Burti -  Burtu attēli
+/static/css  -  .css faili
+/static/images  -  attēli, kuri tika izmantoti vispārīgi
+/static/js  -  .javascript faili
+/static/Sounds  -  atsevišķi skaņas efekti alfabēta lapai
 
 
 
