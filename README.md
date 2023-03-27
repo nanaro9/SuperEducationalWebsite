@@ -2,6 +2,8 @@
 
 Interneta lapa ar alfabētu, visādām atmiņas spēlēm ar burtiem, cipariem. Tieši tas, kas ir vajadzīgs bērniem!
 
+------
+
 Pastāv divas mapes: "static" un "Templates"
 
 Mapē "Templates" ir visi .html faili
