@@ -19,8 +19,9 @@ Mapē "static" atrodas visi papildus faili izmantoti tajos .html failos
 /static/Sounds  |  atsevišķi skaņas efekti alfabēta lapai
 
 
-
+------
 
 
 Programmēšana I | 6. tēmas ietvaros
+
 Projekta autors - Aleksis Počs
