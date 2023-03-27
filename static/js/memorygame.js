@@ -113,12 +113,8 @@ const flipCard = card => {
 
         if (flippedCards[0].className.includes('board')){
             console.log('board found')
-            delete flippedCards.board
-            console.log(flippedCards)
-        }
-
-        if (flippedCards.length === 3){
-            console.log(typeof(flippedCards), flippedCards[0], typeof(flippedCards[0]))
+            flippedCards[0].classList.remove('flipped')
+            console.log(flippedCards, flippedCards[0].classList)
         }
 
         if (flippedCards[0].innerText == flippedCards[1].innerText) {
