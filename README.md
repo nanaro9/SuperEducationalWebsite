@@ -8,6 +8,8 @@ Mapē "Templates" ir visi .html faili
 
 Mapē "static" atrodas visi papildus faili izmantoti tajos .html failos
 
+------
+
 /static/Burti |  Burtu attēli
 
 /static/css  |  .css faili
